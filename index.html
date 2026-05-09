@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws Doc</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="nav-bar">
+        <div class="left">
+            <a href="#main" class="brand-link">
+                <img src="logo.jpeg" alt="Paws Doc logo" class="logo">
+            </a>
+            <a href="#main" class="brand-link name">Paws Doc</a>
+        </div>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation">☰</button>
+
+        <nav class="right" id="menu">
+            <a href="#main">Home</a>
+            <a href="#services-section">Services</a>
+            <a href="#about">About</a>
+            <a href="#why-choose">Why Choose Us</a>
+            <a href="#doctors">Vets</a>
+            <a href="#appointment">Appointment</a>
+            <a href="#contact">Contact</a>
+            <button type="button" id="open-auth-modal" class="nav-auth-btn">Login / Register</button>
+            <span id="welcome-user" class="welcome-user"></span>
+            <button type="button" id="logout-btn" class="nav-auth-btn logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="main">
+            <div id="video">
+                <video autoplay loop muted>
+                    <source src="cute.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div id="text">
+                <h1>Trusted Veterinary Care at Home and Online.</h1>
+                <h2>Trusted support for every stage of your pet's life.</h2>
+                <a href="#appointment">
+                    <button type="button">Book Appointment</button>
+                </a>
+            </div>
+        </section>
+
+        <section id="services-section" class="section-wrap">
+            <h2 class="about-title">Our Services</h2>
+            <div class="about-container">
+                <article class="card interactive-card service-card" data-service="Home Visit" tabindex="0">
+                    <h3>Home Vet Visits</h3>
+                    <p>Experienced vets visit your home for routine checkups and treatment.</p>
+                </article>
+                <article class="card interactive-card service-card" data-service="Online Consultation" tabindex="0">
+                    <h3>Online Consultation</h3>
+                    <p>Connect with our veterinarians quickly for guidance and follow-ups.</p>
+                </article>
+                <article class="card interactive-card service-card" data-service="Vaccination" tabindex="0">
+                    <h3>Vaccination Plans</h3>
+                    <p>Age-wise vaccination schedules to keep your pets healthy and protected.</p>
+                </article>
+                <article class="card interactive-card service-card" data-service="Nutrition Consultation" tabindex="0">
+                    <h3>Nutrition Guidance</h3>
+                    <p>Breed and age-specific food plans for balanced and long-term wellness.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="section-wrap">
+            <h2 class="about-title">About Paws Doc</h2>
+            <div class="split-layout">
+                <div class="card">
+                    <h3>Our Mission</h3>
+                    <p>We make quality veterinary support easy, reliable, and accessible for every pet family.</p>
+                </div>
+                <div class="card">
+                    <h3>Our Vision</h3>
+                    <p>To build a connected pet healthcare ecosystem with doorstep care and digital records.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose" class="section-wrap">
+            <h2 class="about-title">Why Choose Us</h2>
+            <div class="about-container">
+                <article class="card">
+                    <h3>Quick Response</h3>
+                    <p>Same-day availability for urgent support in select areas.</p>
+                </article>
+                <article class="card">
+                    <h3>Qualified Team</h3>
+                    <p>Licensed vets and trained staff focused on safe, ethical treatment.</p>
+                </article>
+                <article class="card">
+                    <h3>Pet-First Experience</h3>
+                    <p>Low-stress visits in familiar surroundings for better recovery.</p>
+                </article>
+                <article class="card">
+                    <h3>Transparent Pricing</h3>
+                    <p>Clear consultation and treatment charges with no hidden fees.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="doctors" class="section-wrap">
+            <h2 class="about-title">Meet Our Vets</h2>
+            <div class="about-container">
+                <article class="card profile-card interactive-card" data-doctor="Dr. Ananya Sharma" tabindex="0">
+                    <h3>Dr. Ananya Sharma</h3>
+                    <p>Small Animal Specialist</p>
+                    <p>8+ years in emergency and preventive care.</p>
+                </article>
+                <article class="card profile-card interactive-card" data-doctor="Dr. Rohan Mehta" tabindex="0">
+                    <h3>Dr. Rohan Mehta</h3>
+                    <p>General Veterinary Physician</p>
+                    <p>Focused on diagnostics, surgery support, and long-term care.</p>
+                </article>
+                <article class="card profile-card interactive-card" data-doctor="Dr. Kavya Nair" tabindex="0">
+                    <h3>Dr. Kavya Nair</h3>
+                    <p>Nutrition and Wellness Expert</p>
+                    <p>Specializes in diet plans, obesity prevention, and senior pet care.</p>
+                </article>
+                <article class="card profile-card interactive-card" data-doctor="Dr. Arjun Verma" tabindex="0">
+                    <h3>Dr. Arjun Verma</h3>
+                    <p>Tele-Consultation Lead</p>
+                    <p>Helps pet parents with remote guidance and follow-up planning.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="appointment" class="section-wrap">
+            <h2 class="about-title">Book an Appointment</h2>
+            <form id="appointment-form" class="appointment-form" novalidate>
+                <div class="form-grid">
+                    <div>
+                        <label for="owner-name">Owner Name</label>
+                        <input id="owner-name" name="owner-name" type="text" placeholder="Enter your name">
+                    </div>
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" name="phone" type="tel" placeholder="10-digit phone number">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="Enter your email">
+                    </div>
+                    <div>
+                        <label for="pet-name">Pet Name</label>
+                        <input id="pet-name" name="pet-name" type="text" placeholder="Enter pet name">
+                    </div>
+                    <div>
+                        <label for="pet-type">Pet Type</label>
+                        <select id="pet-type" name="pet-type">
+                            <option value="">Select pet type</option>
+                            <option value="Dog">Dog</option>
+                            <option value="Cat">Cat</option>
+                            <option value="Bird">Bird</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="service-type">Service Required</label>
+                        <select id="service-type" name="service-type">
+                            <option value="">Select service</option>
+                            <option value="Home Visit">Home Visit</option>
+                            <option value="Online Consultation">Online Consultation</option>
+                            <option value="Vaccination">Vaccination</option>
+                            <option value="Nutrition Consultation">Nutrition Consultation</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="visit-date">Preferred Date</label>
+                        <input id="visit-date" name="visit-date" type="date">
+                    </div>
+                    <div>
+                        <label for="visit-time">Preferred Time</label>
+                        <input id="visit-time" name="visit-time" type="time">
+                    </div>
+                </div>
+                <label for="notes">Additional Notes</label>
+                <textarea id="notes" name="notes" rows="4" placeholder="Share symptoms or requests"></textarea>
+                <p id="form-message" class="form-message" aria-live="polite"></p>
+                <button type="submit">Confirm Booking</button>
+            </form>
+        </section>
+
+        <section id="testimonials" class="section-wrap">
+            <h2 class="about-title">What Pet Parents Say</h2>
+            <div class="testimonial-box">
+                <p id="testimonial-text">"The doctor was kind and explained everything in detail. My dog recovered quickly."</p>
+                <h4 id="testimonial-author">- Neha and Bruno</h4>
+                <div class="testimonial-controls">
+                    <button type="button" id="prev-testimonial">Previous</button>
+                    <button type="button" id="next-testimonial">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section-wrap">
+            <h2 class="about-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <article class="faq-item">
+                    <button type="button" class="faq-question">How quickly can I get a home visit?</button>
+                    <p class="faq-answer">Most bookings are scheduled within 24 hours, based on your location.</p>
+                </article>
+                <article class="faq-item">
+                    <button type="button" class="faq-question">Do you handle emergency cases?</button>
+                    <p class="faq-answer">Yes, our support team guides emergency handling and priority scheduling.</p>
+                </article>
+                <article class="faq-item">
+                    <button type="button" class="faq-question">Can I reschedule my appointment?</button>
+                    <p class="faq-answer">Yes, you can reschedule with at least 2 hours notice through call or email.</p>
+                </article>
+                <article class="faq-item">
+                    <button type="button" class="faq-question">Do you provide vaccination reminders?</button>
+                    <p class="faq-answer">Yes, we send reminders so your pet never misses critical doses.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section-wrap">
+            <h2 class="about-title">Contact Us</h2>
+            <div class="split-layout">
+                <div class="card">
+                    <h3>Reach Our Team</h3>
+                    <p>Email: <a href="mailto:support@pawsdoc.com">support@pawsdoc.com</a></p>
+                    <p>Phone: <a href="tel:+91123456789">+91 60056 19343</a></p>
+                    <p>Hours: 9:00 AM - 9:00 PM</p>
+                </div>
+                <div class="card">
+                    <h3>Clinic Office</h3>
+                    <p>Pet Care Center, Jammu, J&K</p>
+                    <p>Available for in-clinic follow-up and medicine pickup.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="section-wrap">
+            <div class="cta-box">
+                <h2>Your Pet Deserves Timely, Trusted Care</h2>
+                <p>Book your consultation in minutes and get support from experienced vets.</p>
+                <a href="#appointment"><button type="button">Book a Visit Today</button></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Paws Doc</h3>
+                <p>Your trusted virtual pet healthcare partner.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="#main">Home</a></p>
+                <p><a href="#services-section">Services</a></p>
+                <p><a href="#appointment">Appointment</a></p>
+                <p><a href="#contact">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:support@pawsdoc.com">support@pawsdoc.com</a></p>
+                <p>Phone: <a href="tel:+91123456789">+91 123-456-789</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Paws Doc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="auth-modal" id="auth-modal">
+        <div class="auth-content">
+            <button type="button" class="auth-close" id="close-auth-modal" aria-label="Close modal">×</button>
+            <h3 id="auth-title">Login</h3>
+
+            <form id="login-form" class="auth-form">
+                <label for="login-email">Email</label>
+                <input id="login-email" type="email" placeholder="Enter your email">
+                <label for="login-password">Password</label>
+                <div class="password-wrap">
+                    <input id="login-password" type="password" placeholder="Enter password">
+                    <button type="button" class="password-toggle" data-target="login-password">Show</button>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+
+            <form id="register-form" class="auth-form hidden">
+                <label for="register-name">Full Name</label>
+                <input id="register-name" type="text" placeholder="Enter your full name">
+                <label for="register-email">Email</label>
+                <input id="register-email" type="email" placeholder="Enter your email">
+                <label for="register-password">Password</label>
+                <div class="password-wrap">
+                    <input id="register-password" type="password" placeholder="Create password">
+                    <button type="button" class="password-toggle" data-target="register-password">Show</button>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+
+            <p class="switch-auth-text">
+                <button type="button" id="switch-auth-mode">Create a new account</button>
+            </p>
+        </div>
+    </div>
+
+    <button type="button" id="back-to-top" aria-label="Back to top">↑</button>
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
